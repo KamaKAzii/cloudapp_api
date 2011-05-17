@@ -28,9 +28,9 @@ module CloudApp
     
     def parse_errors(errors)
       return case errors
-        when Hash:    errors.collect{|k,v| "#{k}: #{v}"}
-        when String:  [errors]
-        when Array:   errors
+        when Hash;    errors.collect{|k,v| "#{k}: #{v}"}
+        when String;  [errors]
+        when Array;   errors
         else []
       end
     end
